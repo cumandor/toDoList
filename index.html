@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToDo List</title>
+    <link rel="icon" type="image/x-icon" href="/img/imgonline-com-ua-favicon-EfpWKmtEDh3t.ico">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Orbitron&family=PT+Sans:wght@400;700&family=Tilt+Neon&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="page-preloader" class="preloader-2">
+        <div class="loader"><span id="load_perc">LOADING 0%</span></div>
+    </div>
+    
+    <div class="main-space">
+        <div class="header">
+            <div class="header_left">
+                <div class="logo">
+                    <p>ToDo List</p>
+                </div>
+            </div>
+            <div class="header_right">
+                <img alt="">
+
+                    <button class="add-task__btn">Add Task</button>
+                    <div class="modal-overlay">
+                        <div class="modal animate__animated animate__fadeIn">
+                          <button class="close-modal">&times;</button>
+                          <h2 class="add-task__h2">Add Task</h2>
+                          <form id="add-task-form">
+                            <label class="add-task__title" for="title">Title:</label>
+                            <input class="add-task__area" type="text" id="title" name="title" required>
+                            <label class="add-task__title" for="title">Select favorites:</label>
+                            <select id="modal__select" class="project__name">
+                                <!-- <option id="all-task__select">All-tasks</option> -->
+                            </select>
+                            <label class="add-task__category" for="category">Date of end:</label>
+                            <input class="add-task__data" type="date" id="data" name="data" required>
+                            <button class="add-btn" type="submit">Add Task</button>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="overlay"></div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        
+            <div class="work-space">
+        <div class="left-space">
+            <div class="profile">
+            <div class="container">
+
+               <div class="btns-container">
+                <button id="register-btn" class="register-button">Registration</button>
+                <button id="login-btn" class="login-button">Login</button>
+              </div>
+            
+            
+              <div class="btns2-container">
+               <button id="logout-btn" style="display:none;" class="circle-button">Log out</button>
+               <form class="register-form" id="register-form" style="display:none;">
+                <label class="username" for="username">Your name:</label><br>
+                <input class="register-inpt" type="text" id="username" name="username" required><br>
+                <label class="pass" for="password">Password:</label><br>
+                <input class="register-inpt" type="password" id="password" name="password" required><br><br>
+                <input class="submit__login" type="submit" value="Register" required>
+              </form>
+                        
+
+
+              <form class="login-form" id="login-form" style="display:none;">
+                <label class="username" for="username">Your name:</label><br>
+                <input class="register-inpt" type="text" id="username" name="username" required><br>
+                <label class="pass" for="password">Password:</label><br>
+                <input class="register-inpt" type="password" id="password" name="password" required><br><br>
+                <input class="submit__login" type="submit" value="Login" required>
+              </form>
+            </div>
+                 
+
+                <div class="done-container">
+                <div class="profile__data">
+                    <h2>-- --</h2>
+                </div>
+                <div class="buttons-row"> 
+
+                </div>
+                <ul class="task__complete">
+                    <li class="task__complete-item">
+                            <p class="compl">0</p>
+                        <span class="span-completed">Completed</span>
+                    </li>
+                    <!-- <li class="task__complete-item">
+                            <p class="not-compl">--</p>
+                        <span class="span-notcompleted">Not complete</span>
+                    </li> -->
+                    <li class="task__complete-item">
+                            <p class="all-tasks">---</p>
+                        <span class="span-all">Not complete</span>
+                    </li>
+                </ul>
+            </div>
+                
+            </div>
+            </div>
+
+            <div class="favorite-list">
+            <div class="container">
+                <button class="fav__btn-add">+</button>
+            <p class="favorites__title">Favorites</p>
+            <div class="projects__left-space">
+                <div id="fav-btn" class="btn1">
+                    
+                  </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+        
+        
+        <div class="right-space">
+                <div class="right-space__collab">
+                    <div class="right-space__left-position">
+
+                        <div class="project">
+                            <div class="project__color"></div>
+                            <select id="mySelect" class="project__name">
+                                <option value="All-tasks" id="all-task__select">All tasks</option>
+                            </select>
+                              
+                        </div>
+                        
+                    <ul class="task__manager hide" id="All-task">
+
+        
+                    
+                    </ul>
+
+<!-- 
+                    <ul class="task__manager hide" id="finished">
+
+    
+                    
+                    </ul> -->
+        
+
+                    <!-- <div class="add-task">
+                        <button class="add-task__btn">Add Task</button>
+                        <div class="modal-overlay">
+                            <div class="modal animate__animated animate__fadeIn">
+                              <button class="close-modal">&times;</button>
+                              <h2 class="add-task__h2">Add Task</h2>
+                              <form id="add-task-form">
+                                <label class="add-task__title" for="title">Title:</label>
+                                <input class="add-task__area" type="text" id="title" name="title" required>
+                                <label class="add-task__title" for="title">Select favorites:</label>
+                                <select class="project__name">
+                                    <option id="all-task__select">All tasks</option>
+                                    <option id="compl__task">Finished</option>
+                                </select>
+                                <label class="add-task__category" for="category">Date of end:</label>
+                                <input class="add-task__data" type="date" id="data" name="data" required>
+                                <button class="add-btn" type="submit">Add Task</button>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="overlay"></div>
+                    </div> -->
+ 
+                        
+                    </div>    
+                </div>
+        </div>
+    </div>
+        </div>
+
+        <script src="./scripts/addTask.js"></script>
+        <script src="./scripts/regis.js"></script>
+        <script src="./scripts/favor.js"></script>
+        <script src="./scripts/preloader.js"></script>
+        <script src="./scripts/opt-trans.js"></script>
+        <script src="./scripts/task-option.js"></script>
+</body>
+</html>
